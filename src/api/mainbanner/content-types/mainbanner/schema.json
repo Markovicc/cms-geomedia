@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "mainbanners",
+  "info": {
+    "singularName": "mainbanner",
+    "pluralName": "mainbanners",
+    "displayName": "MainBanner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "Data Science Consulting Services"
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true,
+      "default": "Get professional & reliable research oriented solutions for Data Science and Machine Learning business needs. Enjoy stress free decesion making!"
+    },
+    "btnLink": {
+      "type": "string",
+      "required": true,
+      "default": "/about-us-one"
+    },
+    "btnText": {
+      "type": "string",
+      "required": true,
+      "default": "About Us"
+    },
+    "videoLink": {
+      "type": "string",
+      "required": true,
+      "default": "https://www.youtube.com/embed/g1WG4D0Aiek"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

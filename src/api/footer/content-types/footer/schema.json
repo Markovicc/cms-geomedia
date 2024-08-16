@@ -1,0 +1,82 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse."
+    },
+    "socialLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-lists.social-list",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Explore"
+    },
+    "linksList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer-links.footer-link",
+      "required": true
+    },
+    "titleTwo": {
+      "type": "string",
+      "default": "Resources",
+      "required": true
+    },
+    "linksListTwo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer-links.footer-link",
+      "required": true
+    },
+    "titleThree": {
+      "type": "string",
+      "default": "Address",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "default": "175 5th Ave, New York, NY 10010, United States"
+    },
+    "phone": {
+      "type": "string",
+      "default": "+44587154756",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "default": "hello@parix.com",
+      "required": true
+    },
+    "fax": {
+      "type": "string",
+      "default": "+557854578964",
+      "required": true
+    }
+  }
+}

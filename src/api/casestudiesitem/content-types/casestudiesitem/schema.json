@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casestudiesitems",
+  "info": {
+    "singularName": "casestudiesitem",
+    "pluralName": "casestudiesitems",
+    "displayName": "CaseStudiesItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "richText": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

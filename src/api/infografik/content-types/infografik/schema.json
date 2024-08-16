@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infografiks",
+  "info": {
+    "singularName": "infografik",
+    "pluralName": "infografiks",
+    "displayName": "Infografik"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

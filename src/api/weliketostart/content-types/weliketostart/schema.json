@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "weliketostarts",
+  "info": {
+    "singularName": "weliketostart",
+    "pluralName": "weliketostarts",
+    "displayName": "WeLikeToStart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "We Like to Start Your Project With Us"
+    },
+    "shortDesc": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "required": true
+    },
+    "btnLink": {
+      "type": "string",
+      "required": true,
+      "default": "/contact"
+    },
+    "btnText": {
+      "type": "string",
+      "required": true,
+      "default": "Get Started"
+    }
+  }
+}

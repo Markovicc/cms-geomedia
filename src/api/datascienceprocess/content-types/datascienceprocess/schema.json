@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "datascienceprocesses",
+  "info": {
+    "singularName": "datascienceprocess",
+    "pluralName": "datascienceprocesses",
+    "displayName": "DataScienceProcess",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true,
+      "default": "HOW IT'S WORK"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "The Data Science Process"
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    },
+    "process": {
+      "type": "component",
+      "repeatable": true,
+      "component": "process-boxes.process-box",
+      "required": true
+    }
+  }
+}

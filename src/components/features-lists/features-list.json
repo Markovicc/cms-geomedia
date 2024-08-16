@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_features_lists_features_lists",
+  "info": {
+    "displayName": "features-list",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "iconImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

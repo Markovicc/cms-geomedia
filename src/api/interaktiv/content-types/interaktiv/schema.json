@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interaktivs",
+  "info": {
+    "singularName": "interaktiv",
+    "pluralName": "interaktivs",
+    "displayName": "Interaktiv",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "iframe": {
+      "type": "dynamiczone",
+      "components": [
+        "posts.iframe"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-information"
+    }
+  }
+}

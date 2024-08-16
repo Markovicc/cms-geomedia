@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_faq_accordion_tabs_faq_accordion_tabs",
+  "info": {
+    "displayName": "faq-accordion-tab",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "accordions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq-accordions.faq-accordion",
+      "required": true
+    }
+  }
+}

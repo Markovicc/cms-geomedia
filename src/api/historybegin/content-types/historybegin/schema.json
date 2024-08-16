@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "historybegins",
+  "info": {
+    "singularName": "historybegin",
+    "pluralName": "historybegins",
+    "displayName": "HistoryBegin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true,
+      "default": "OUR HISTORY"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "History Begins in 2013"
+    },
+    "historyTimeline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "history-timelines.history-timeline",
+      "required": true
+    }
+  }
+}

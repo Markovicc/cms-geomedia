@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "termsofservices",
+  "info": {
+    "singularName": "termsofservice",
+    "pluralName": "termsofservices",
+    "displayName": "TermsOfService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "richText": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

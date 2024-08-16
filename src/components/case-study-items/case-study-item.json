@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_case_study_items_case_study_items",
+  "info": {
+    "displayName": "case-study-item",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida."
+    },
+    "descriptionTwo": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+      "required": true
+    },
+    "btnLink": {
+      "type": "string",
+      "required": true,
+      "default": "/case-studies-details-one"
+    },
+    "btnText": {
+      "type": "string",
+      "required": true,
+      "default": "Details More"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

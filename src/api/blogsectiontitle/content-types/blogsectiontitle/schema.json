@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogsectiontitles",
+  "info": {
+    "singularName": "blogsectiontitle",
+    "pluralName": "blogsectiontitles",
+    "displayName": "BlogSectionTitle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Our Blog"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "Latest Valuable Insights"
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    }
+  }
+}

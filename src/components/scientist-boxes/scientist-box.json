@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_scientist_boxes_scientist_boxes",
+  "info": {
+    "displayName": "scientist-box",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-lists.social-list",
+      "required": true
+    }
+  }
+}

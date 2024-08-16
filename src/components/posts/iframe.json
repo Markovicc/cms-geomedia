@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_posts_iframes",
+  "info": {
+    "displayName": "Iframe",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "code": {
+      "type": "text"
+    },
+    "class": {
+      "type": "string"
+    },
+    "dataSrc": {
+      "type": "string"
+    },
+    "script": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "ourdatascientists",
+  "info": {
+    "singularName": "ourdatascientist",
+    "pluralName": "ourdatascientists",
+    "displayName": "OurDataScientist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true,
+      "default": "TEAM MEMBERS"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "Our Data Scientist"
+    },
+    "shortDesc": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    },
+    "scientists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "scientist-boxes.scientist-box",
+      "required": true
+    }
+  }
+}
