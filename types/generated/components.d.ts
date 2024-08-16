@@ -29,6 +29,34 @@ export interface SocialListsSocialList extends Schema.Component {
   };
 }
 
+export interface SeoSeoInformation extends Schema.Component {
+  collectionName: 'components_seo_seo_informations';
+  info: {
+    displayName: 'seoInformation';
+    icon: 'search';
+  };
+  attributes: {
+    seoTitle: Attribute.String;
+    seoDescription: Attribute.Text;
+  };
+}
+
+export interface ScientistBoxesScientistBox extends Schema.Component {
+  collectionName: 'components_scientist_boxes_scientist_boxes';
+  info: {
+    displayName: 'scientist-box';
+    icon: 'arrowRight';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'> & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    designation: Attribute.String & Attribute.Required;
+    lists: Attribute.Component<'social-lists.social-list', true> &
+      Attribute.Required;
+  };
+}
+
 export interface ProcessBoxesProcessBox extends Schema.Component {
   collectionName: 'components_process_boxes_process_boxes';
   info: {
@@ -44,15 +72,20 @@ export interface ProcessBoxesProcessBox extends Schema.Component {
   };
 }
 
-export interface SeoSeoInformation extends Schema.Component {
-  collectionName: 'components_seo_seo_informations';
+export interface HistoryTimelinesHistoryTimeline extends Schema.Component {
+  collectionName: 'components_history_timelines_history_timelines';
   info: {
-    displayName: 'seoInformation';
-    icon: 'search';
+    displayName: 'history-timeline';
+    icon: 'arrowRight';
   };
   attributes: {
-    seoTitle: Attribute.String;
-    seoDescription: Attribute.Text;
+    year: Attribute.String & Attribute.Required;
+    date: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.'>;
+    image: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -93,39 +126,6 @@ export interface PostsIframe extends Schema.Component {
     class: Attribute.String;
     dataSrc: Attribute.String;
     script: Attribute.String;
-  };
-}
-
-export interface HistoryTimelinesHistoryTimeline extends Schema.Component {
-  collectionName: 'components_history_timelines_history_timelines';
-  info: {
-    displayName: 'history-timeline';
-    icon: 'arrowRight';
-  };
-  attributes: {
-    year: Attribute.String & Attribute.Required;
-    date: Attribute.String & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text &
-      Attribute.Required &
-      Attribute.DefaultTo<'Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.'>;
-    image: Attribute.Media<'images'> & Attribute.Required;
-  };
-}
-
-export interface ScientistBoxesScientistBox extends Schema.Component {
-  collectionName: 'components_scientist_boxes_scientist_boxes';
-  info: {
-    displayName: 'scientist-box';
-    icon: 'arrowRight';
-    description: '';
-  };
-  attributes: {
-    image: Attribute.Media<'images'> & Attribute.Required;
-    name: Attribute.String & Attribute.Required;
-    designation: Attribute.String & Attribute.Required;
-    lists: Attribute.Component<'social-lists.social-list', true> &
-      Attribute.Required;
   };
 }
 
@@ -213,13 +213,13 @@ declare module '@strapi/types' {
     export interface Components {
       'testimonials-items.testimonials-item': TestimonialsItemsTestimonialsItem;
       'social-lists.social-list': SocialListsSocialList;
-      'process-boxes.process-box': ProcessBoxesProcessBox;
       'seo.seo-information': SeoSeoInformation;
+      'scientist-boxes.scientist-box': ScientistBoxesScientistBox;
+      'process-boxes.process-box': ProcessBoxesProcessBox;
+      'history-timelines.history-timeline': HistoryTimelinesHistoryTimeline;
       'posts.rich-text': PostsRichText;
       'posts.image-text': PostsImageText;
       'posts.iframe': PostsIframe;
-      'history-timelines.history-timeline': HistoryTimelinesHistoryTimeline;
-      'scientist-boxes.scientist-box': ScientistBoxesScientistBox;
       'footer-links.footer-link': FooterLinksFooterLink;
       'features-lists.features-list': FeaturesListsFeaturesList;
       'faq-accordions.faq-accordion': FaqAccordionsFaqAccordion;

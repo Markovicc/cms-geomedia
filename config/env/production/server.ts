@@ -1,7 +1,7 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
     proxy: true,
-    url: env('APP_URL'), // replaces `host` and `port` properties in the development environment
+    url: env('APP_URL'), // Sets the public URL of the application.
     app: { 
       keys: env.array('APP_KEYS')
     },
-  });
+});
