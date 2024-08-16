@@ -29,34 +29,6 @@ export interface SocialListsSocialList extends Schema.Component {
   };
 }
 
-export interface SeoSeoInformation extends Schema.Component {
-  collectionName: 'components_seo_seo_informations';
-  info: {
-    displayName: 'seoInformation';
-    icon: 'search';
-  };
-  attributes: {
-    seoTitle: Attribute.String;
-    seoDescription: Attribute.Text;
-  };
-}
-
-export interface ScientistBoxesScientistBox extends Schema.Component {
-  collectionName: 'components_scientist_boxes_scientist_boxes';
-  info: {
-    displayName: 'scientist-box';
-    icon: 'arrowRight';
-    description: '';
-  };
-  attributes: {
-    image: Attribute.Media<'images'> & Attribute.Required;
-    name: Attribute.String & Attribute.Required;
-    designation: Attribute.String & Attribute.Required;
-    lists: Attribute.Component<'social-lists.social-list', true> &
-      Attribute.Required;
-  };
-}
-
 export interface ProcessBoxesProcessBox extends Schema.Component {
   collectionName: 'components_process_boxes_process_boxes';
   info: {
@@ -69,6 +41,18 @@ export interface ProcessBoxesProcessBox extends Schema.Component {
     shortDesc: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'>;
+  };
+}
+
+export interface SeoSeoInformation extends Schema.Component {
+  collectionName: 'components_seo_seo_informations';
+  info: {
+    displayName: 'seoInformation';
+    icon: 'search';
+  };
+  attributes: {
+    seoTitle: Attribute.String;
+    seoDescription: Attribute.Text;
   };
 }
 
@@ -126,6 +110,22 @@ export interface HistoryTimelinesHistoryTimeline extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.'>;
     image: Attribute.Media<'images'> & Attribute.Required;
+  };
+}
+
+export interface ScientistBoxesScientistBox extends Schema.Component {
+  collectionName: 'components_scientist_boxes_scientist_boxes';
+  info: {
+    displayName: 'scientist-box';
+    icon: 'arrowRight';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'> & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    designation: Attribute.String & Attribute.Required;
+    lists: Attribute.Component<'social-lists.social-list', true> &
+      Attribute.Required;
   };
 }
 
@@ -213,13 +213,13 @@ declare module '@strapi/types' {
     export interface Components {
       'testimonials-items.testimonials-item': TestimonialsItemsTestimonialsItem;
       'social-lists.social-list': SocialListsSocialList;
-      'seo.seo-information': SeoSeoInformation;
-      'scientist-boxes.scientist-box': ScientistBoxesScientistBox;
       'process-boxes.process-box': ProcessBoxesProcessBox;
+      'seo.seo-information': SeoSeoInformation;
       'posts.rich-text': PostsRichText;
       'posts.image-text': PostsImageText;
       'posts.iframe': PostsIframe;
       'history-timelines.history-timeline': HistoryTimelinesHistoryTimeline;
+      'scientist-boxes.scientist-box': ScientistBoxesScientistBox;
       'footer-links.footer-link': FooterLinksFooterLink;
       'features-lists.features-list': FeaturesListsFeaturesList;
       'faq-accordions.faq-accordion': FaqAccordionsFaqAccordion;
