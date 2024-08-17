@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SocialListsSocialList extends Schema.Component {
+  collectionName: 'components_social_lists_social_lists';
+  info: {
+    displayName: 'social-list';
+    icon: 'arrowRight';
+  };
+  attributes: {
+    icon: Attribute.String & Attribute.Required;
+    link: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface TestimonialsItemsTestimonialsItem extends Schema.Component {
   collectionName: 'components_testimonials_items_testimonials_items';
   info: {
@@ -14,18 +26,6 @@ export interface TestimonialsItemsTestimonialsItem extends Schema.Component {
     description: Attribute.Text &
       Attribute.Required &
       Attribute.DefaultTo<'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'>;
-  };
-}
-
-export interface SocialListsSocialList extends Schema.Component {
-  collectionName: 'components_social_lists_social_lists';
-  info: {
-    displayName: 'social-list';
-    icon: 'arrowRight';
-  };
-  attributes: {
-    icon: Attribute.String & Attribute.Required;
-    link: Attribute.String & Attribute.Required;
   };
 }
 
@@ -72,23 +72,6 @@ export interface ProcessBoxesProcessBox extends Schema.Component {
   };
 }
 
-export interface HistoryTimelinesHistoryTimeline extends Schema.Component {
-  collectionName: 'components_history_timelines_history_timelines';
-  info: {
-    displayName: 'history-timeline';
-    icon: 'arrowRight';
-  };
-  attributes: {
-    year: Attribute.String & Attribute.Required;
-    date: Attribute.String & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text &
-      Attribute.Required &
-      Attribute.DefaultTo<'Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.'>;
-    image: Attribute.Media<'images'> & Attribute.Required;
-  };
-}
-
 export interface PostsRichText extends Schema.Component {
   collectionName: 'components_posts_rich_texts';
   info: {
@@ -126,6 +109,23 @@ export interface PostsIframe extends Schema.Component {
     class: Attribute.String;
     dataSrc: Attribute.String;
     script: Attribute.String;
+  };
+}
+
+export interface HistoryTimelinesHistoryTimeline extends Schema.Component {
+  collectionName: 'components_history_timelines_history_timelines';
+  info: {
+    displayName: 'history-timeline';
+    icon: 'arrowRight';
+  };
+  attributes: {
+    year: Attribute.String & Attribute.Required;
+    date: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.'>;
+    image: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -211,15 +211,15 @@ export interface CaseStudyItemsCaseStudyItem extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'testimonials-items.testimonials-item': TestimonialsItemsTestimonialsItem;
       'social-lists.social-list': SocialListsSocialList;
+      'testimonials-items.testimonials-item': TestimonialsItemsTestimonialsItem;
       'seo.seo-information': SeoSeoInformation;
       'scientist-boxes.scientist-box': ScientistBoxesScientistBox;
       'process-boxes.process-box': ProcessBoxesProcessBox;
-      'history-timelines.history-timeline': HistoryTimelinesHistoryTimeline;
       'posts.rich-text': PostsRichText;
       'posts.image-text': PostsImageText;
       'posts.iframe': PostsIframe;
+      'history-timelines.history-timeline': HistoryTimelinesHistoryTimeline;
       'footer-links.footer-link': FooterLinksFooterLink;
       'features-lists.features-list': FeaturesListsFeaturesList;
       'faq-accordions.faq-accordion': FaqAccordionsFaqAccordion;
